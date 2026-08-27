@@ -6,9 +6,56 @@
     <title>ItaPets</title>
 </head>
 <body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
     <img src="img/logo-ItaPets.webp" alt="Logo do ItaPets" width="200" height="120">
     <h1>Bem-vindo ao ItaPets!</h1>
-    <h2>Cuidados e produtos para animais de estimação</h2>
-    <p>Seu destino para cuidados e produtos para animais de estimação.</p>
+    
+    <section>
+        <h2>Nossos produtos</h2>
+        <article>
+            <p>Aqui temos o produto perfeito para seu melhor amigo.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Entre em contato conosco.</h2>
+        <article>
+            <p>Somos especiliazados em te ajudar.</p>
+        </article>
+        <!-- quando devo usar o action do form?-->
+        <form>
+            <label for="fname">Primeiro nome:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="fsobrenome">Sobrenome:</label><br>
+            <input type="text" id="fsobrenome" name="fsobrenome"><br>
+            <label for="nascimento">Data de nascimento:</label><br>
+            <input type="date" id="nascimento" name="nascimento"><br>
+            <label for="email">Email: </label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="telefone">Telefone: </label><br>    
+            <input type="tel" name="telefone" id="telefone"><br>
+            <label>Como você nos encontrou?</label><br>
+         <!--Nesse caso é melhor usar o label ou p?-->
+            <select name="origem">
+                <option value=""disabled selected hidden>Selecione</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Google">Google</option>
+                <option value="Amigos">Amigos</option>
+                <option value="Youtube">Youtube</option>
+            </select><br><br>
+            <input type="submit" value="submit">
+
+        </form>
+    </section>
+
 </body>
 </html>    
