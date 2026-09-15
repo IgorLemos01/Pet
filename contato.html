@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contatos</title>
 </head>
 
 <body>
@@ -17,25 +17,27 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <h2>Entre em contato conosco.</h2>
-        <article>
-            <p>Somos especiliazados em te ajudar.</p>
-        </article>
-        <!-- quando devo usar o action do form?-->
-        <form>
+    <main>
+
+        <h1>Entre em contato conosco.</h1>
+        <form action="mailto:igorlemos076@gmail.com" method="post" enctype="text/plain">
             <label for="fname">Primeiro nome:</label><br>
             <input type="text" id="fname" name="fname"><br>
+
             <label for="fsobrenome">Sobrenome:</label><br>
             <input type="text" id="fsobrenome" name="fsobrenome"><br>
+
             <label for="nascimento">Data de nascimento:</label><br>
             <input type="date" id="nascimento" name="nascimento"><br>
+
             <label for="email">Email: </label><br>
             <input type="email" id="email" name="email"><br>
+
             <label for="telefone">Telefone: </label><br>
             <input type="tel" name="telefone" id="telefone"><br>
-            <label>Como você nos encontrou?</label><br>
-            <!--Nesse caso é melhor usar o label ou p?-->
+
+            <p>Como você nos encontrou?</p>
+            <br>
             <select name="origem">
                 <option value="disabled selected hidden">Selecione</option>
                 <option value="Instagram">Instagram</option>
@@ -43,10 +45,21 @@
                 <option value="Amigos">Amigos</option>
                 <option value="Youtube">Youtube</option>
             </select><br><br>
+            <p>Essa é a sua primeira compra no site?</p>
+
+            <input type="radio" id="Sim" name="Positivo" value="Sim">
+            <label for="Sim">Sim</label><br>
+
+            <input type="radio" id="Nao" name="Positivo" value="Nao">
+            <label for="Nao">Não</label><br><br>
+
+
             <input type="submit" value="submit">
+            <input type="reset" value="Reset">
+            -<button type="button">Enviar</button>
 
         </form>
-    </section>
+    </main>
 </body>
 
 </html>
