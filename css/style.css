@@ -1,4 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/poppins-600.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/poppins-700.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --cor-primaria: #2f6f5e;
@@ -157,7 +171,7 @@ main > section > a:visited {
     border-radius: 8px;
 }
 
-/* ===== 5. CARDS DE PRODUTO (Flexbox) ===== */
+/*CARDS DE PRODUTO*/
 section > article {
     display: flex;
     text-align: left;
@@ -195,7 +209,7 @@ article h3 {
     text-align: center;
 }
 
-/* ===== 6. PÁGINA DE PRODUTO ===== */
+/*PÁGINA DE PRODUTO*/
 main > img {
     width: 100%;
     max-width: 400px;
@@ -225,7 +239,7 @@ details summary {
     color: var(--cor-primaria);
 }
 
-/* ===== 7. FORMULÁRIO (grid do Bootstrap: row / col-*) ===== */
+/* FORMULÁRIO*/
 form {
     width: 100%;
     max-width: 900px;
