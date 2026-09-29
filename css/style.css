@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+:root {
+    --cor-primaria: #2f6f5e;
+    --cor-destaque: #ff8a4c;
+    --cor-destaque-escuro: #e6733a;
+    --cor-fundo: #fdf9f5;
+    --cor-texto: #2e2e2e;
+}
+
+/*ESTILOS GERAIS*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--cor-primaria);
+}
+
+h1 { 
+    font-size: 1.75em; 
+}
+h2 { 
+    font-size: 1.5em; 
+}
+h3 { 
+    font-size: 1.125em; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover,
+nav a:active {
+    color: var(--cor-destaque);
+}
+
+/*HEADER*/
+header {
+    padding: 1.25em 1em;
+    text-align: center;
+    color: #ffffff;
+    background-color: var(--cor-primaria);
+}
+
+header h1 {
+    color: #ffffff;
+}
+
+header img {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6em;
+    margin: 0 0 1em;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.4em 0.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/*MAIN*/
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1em 0.75em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > h1 {
+    text-align: center;
+}
+
+main > section {
+    width: 100%;
+    margin-bottom: 1.5em;
+    padding: 0.75em;
+    background-color: #ffffff;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 12px;
+}
+
+/*PRODUTOS*/
+.produtos {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25em;
+}
+
+
+.produtos h2 {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    text-align: center;
+}
+
+/*SOBRE*/
+#sobre {
+    padding: 1.25em;
+    text-align: center;
+}
+
+#sobre h2 {
+    text-align: center;
+}
+
+#sobre h3 {
+    font-style: italic;
+}
+
+main > section > a:link,
+main > section > a:visited {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.7em 1.5em;
+    color: #ffffff;
+    background-color: var(--cor-destaque);
+    border-radius: 8px;
+}
+
+/* ===== 5. CARDS DE PRODUTO (Flexbox) ===== */
+section > article {
+    display: flex;
+    text-align: left;
+    border: 2px solid var(--cor-destaque);
+    border-radius: 8px;
+}
+
+article > a {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0.75em;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+}
+
+article > a:hover h3 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+article h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.preco {
+    margin-top: auto;
+    margin-bottom: 0;
+    font-weight: 700;
+    color: var(--cor-destaque-escuro);
+    text-align: center;
+}
+
+/* ===== 6. PÁGINA DE PRODUTO ===== */
+main > img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 1em;
+    border-radius: 12px;
+}
+
+main > p {
+    font-size: 1.4em;
+    text-align: center;
+    color: var(--cor-destaque-escuro);
+}
+
+details {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 1em;
+    padding: 1em 1.5em;
+    background-color: #ffffff;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 10px;
+}
+
+details summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+/* ===== 7. FORMULÁRIO (grid do Bootstrap: row / col-*) ===== */
+form {
+    width: 100%;
+    max-width: 900px;
+    padding: 1.2em;
+    background-color: #ffffff;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 12px;
+}
+
+form label {
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+form input[type="submit"] {
+    font-weight: 700;
+    background-color: var(--cor-destaque);
+    border-color: var(--cor-destaque);
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--cor-destaque-escuro);
+    border-color: var(--cor-destaque-escuro);
+}
+
+/* ===== 8. FOOTER ===== */
+footer {
+    padding: 1.2em;
+    text-align: center;
+    color: #ffffff;
+    background-color: var(--cor-primaria);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* MEDIA QUERIES*/
+/*celular*/
+
+@media (min-width: 576px) {
+    header img {
+        max-width: 400px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/*tablet*/
+@media (min-width: 768px) {
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 1.875em; }
+
+    header {
+        padding: 2em 1em;
+    }
+
+    main {
+        padding: 2em 1.5em;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 1.5em;
+    }
+
+    .sobre {
+        padding: 2em;
+    }
+
+    article > a {
+        padding: 1em;
+    }
+
+    .form-contato {
+        padding: 2em;
+    }
+}
