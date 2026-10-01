@@ -172,6 +172,28 @@ main > section > a:visited {
     border-radius: 8px;
 }
 
+.efeito-clique--ativo {
+    animation: pulso-ao-clicar 420ms ease-out;
+}
+
+@keyframes pulso-ao-clicar {
+    35% {
+        transform: scale(0.96);
+        box-shadow: 0 0 0 7px rgba(255, 138, 76, 0.38);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 138, 76, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .efeito-clique--ativo {
+        animation: none;
+    }
+}
+
 /*CARDS DE PRODUTO*/
 section > article {
     display: flex;
@@ -222,6 +244,61 @@ main > p {
     font-size: 1.4em;
     text-align: center;
     color: var(--cor-destaque-escuro);
+}
+
+.controle-quantidade {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 1.5em;
+    padding: 1em;
+    background-color: #ffffff;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 8px;
+}
+
+.controle-quantidade > label {
+    display: block;
+    margin-bottom: 0.4em;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+.controle-quantidade__botoes {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.controle-quantidade__botoes button,
+.controle-quantidade__botoes input {
+    min-width: 44px;
+    height: 44px;
+    font: inherit;
+    text-align: center;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 6px;
+}
+
+.controle-quantidade__botoes button {
+    color: #ffffff;
+    background-color: var(--cor-primaria);
+    cursor: pointer;
+}
+
+.controle-quantidade__botoes button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.controle-quantidade__botoes input {
+    flex: 1;
+    min-width: 0;
+}
+
+.controle-quantidade__subtotal {
+    margin: 0.75em 0 0;
+    font-weight: 700;
+    color: var(--cor-texto);
 }
 
 details {
@@ -286,6 +363,68 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/*CARROSSEL (Bootstrap)*/
+.destaques {
+    padding: 0.75em;
+}
+
+.destaques h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.carousel {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel-item img {
+    height: 300px;
+    object-fit: contain;
+}
+
+.carousel-caption {
+    position: static;
+    padding: 0.5em 1em 2.5em;
+    color: var(--cor-texto);
+}
+
+.carousel-caption h3 {
+    margin: 0;
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-weight: 700;
+    color: var(--cor-destaque-escuro);
+}
+
+/*ACCORDION (jQuery UI)*/
+#accordion {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 1em;
+}
+
+#accordion .ui-accordion-header {
+    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+#accordion .ui-accordion-header.ui-state-active {
+    color: #ffffff;
+    background: var(--cor-primaria);
+}
+
+#accordion .ui-accordion-content {
+    font-family: inherit;
+    font-size: 1em;
+    background: #ffffff;
+    border-color: var(--cor-primaria);
 }
 
 /* MEDIA QUERIES*/

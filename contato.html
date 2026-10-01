@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contatos</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -36,7 +37,8 @@
 
                 <div class="col-12 col-md-6">
                     <label for="nascimento">Data de nascimento:</label>
-                    <input type="date" id="nascimento" name="nascimento" class="form-control">
+                    <input type="text" id="nascimento" name="nascimento" class="form-control" placeholder="dd/mm/aaaa"
+                        autocomplete="off">
                 </div>
 
                 <div class="col-12 col-md-6">
@@ -76,7 +78,7 @@
                 </div>
 
                 <div class="col-12">
-                    <input type="submit" value="Enviar" class="btn btn-primary">
+                    <input type="submit" value="Enviar" class="btn btn-primary efeito-clique">
                 </div>
 
             </div>
@@ -85,6 +87,8 @@
     <footer>
         <p>&copy; 2026 ItaPets. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

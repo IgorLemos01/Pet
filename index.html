@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ItaPets - Pet Shop Online</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -23,6 +24,67 @@
 
 
     <main>
+        <section class="destaques">
+            <h2>Destaques da semana</h2>
+
+            <div id="carrosselDestaques" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Destaque 1"></button>
+                    <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="1"
+                        aria-label="Destaque 2"></button>
+                    <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="2"
+                        aria-label="Destaque 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="racao-premiatta-feline-gatos-castrados.html">
+                            <img src="img/racao-premiatta-feline-gatos-castrados.webp" class="d-block w-100"
+                                alt="Ração Premiatta Feline para Gatos Castrados - 10,1 Kg">
+                        </a>
+                        <div class="carousel-caption">
+                            <h3>Ração para gatos castrados</h3>
+                            <p>R$109,90</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="cama-pet-100x80-premium.html">
+                            <img src="img/cama-pet-100x80-premium.webp" class="d-block w-100"
+                                alt="Cama premium para pet">
+                        </a>
+                        <div class="carousel-caption">
+                            <h3>Cama premium para pet</h3>
+                            <p>R$119,90</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <a href="brinquedo-pet-com-porta-racao-bola.html">
+                            <img src="img/brinquedo-pet-com-porta-racao-bola-produto.webp" class="d-block w-100"
+                                alt="Brinquedo com porta ração">
+                        </a>
+                        <div class="carousel-caption">
+                            <h3>Brinquedo com porta ração</h3>
+                            <p>R$57,90</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrosselDestaques"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrosselDestaques"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </section>
+
         <section class="produtos">
             <h2>Rações para seu gato</h2>
 
@@ -174,13 +236,16 @@
                 possível. É por isso que nos dedicamos a oferecer uma ampla variedade de produtos de alta qualidade para
                 cães, gatos e outros animais de estimação.</p>
             <p>Entre em contato conosco e descubra por que somos a escolha certa para o bem-estar do seu pet!</p>
-            <a href="contato.html">Entre em contato</a>
+            <a class="efeito-clique" href="contato.html">Entre em contato</a>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 ItaPets. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

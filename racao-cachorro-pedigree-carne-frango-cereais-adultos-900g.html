@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -22,14 +22,25 @@
         <h1>Ração Cachorro Pedigree Carne Frango Cereais Adultos 900g</h1>
         <img src="img/racao-cachorro-pedigree-carne-frango-cereais-adultos-900g.webp"
             alt="Ração Cachorro Pedigree Carne Frango Cereais Adultos 900g" width="600" height="600">
-        <p><strong>39,90</strong></p>
+        <p><strong id="preco-produto" data-preco="39.90">39,90</strong></p>
+
+        <div id="controle-quantidade" class="controle-quantidade">
+            <label for="quantidade-produto">Quantidade</label>
+            <div class="controle-quantidade__botoes">
+                <button type="button" data-quantity-change="-1" aria-label="Diminuir quantidade">-</button>
+                <input id="quantidade-produto" type="number" min="1" max="99" value="1" inputmode="numeric">
+                <button type="button" data-quantity-change="1" aria-label="Aumentar quantidade">+</button>
+            </div>
+            <p class="controle-quantidade__subtotal">Subtotal: <output id="subtotal-produto" for="quantidade-produto"
+                    aria-live="polite"></output></p>
+        </div>
 
         <details open>
             <summary>Descrição</summary>
             <dl>
                 <dt>Ração</dt>
-                <dd>Ração Cachorro Pedigree Carne Frango Cereais Adultos 900g é um alimento completo e balanceado para
-                    cães adultos.</dd>
+                <dd>Ração Cachorro Pedigree Carne Frango Cereais Adultos 900g é um alimento completo e
+                    balanceado para cães adultos.</dd>
             </dl>
         </details>
 
@@ -47,9 +58,12 @@
             </dl>
         </details>
     </main>
+
     <footer>
         <p>&copy; 2026 ItaPets. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
